@@ -1,0 +1,120 @@
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+header{ 
+    width: 100%;
+    background-color: #fdfdfd;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+header span.logo {
+    display: block;
+    padding: 1.2em 0 .6em 14px;
+}
+
+header img {
+    height: 32px;
+    width: auto;
+}
+
+header h1 { 
+    margin: 0; 
+    padding: 0;
+    display: inline;
+}
+
+div.card-stack {
+    width: 34%;
+    display: inline-block;
+}
+
+div.content {
+    display: block;
+    width: 34%;
+    margin: 2em auto 0 auto;
+}
+
+div.content div.card {
+    padding-bottom: 25px;
+}
+
+aside.user-info {
+    width: 33%;
+    display: inline-block;
+}
+
+div.card {
+    background-color: #fdfdfd;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 3px;
+    padding: 0 14px;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #0d6bb7;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div.btn, button.btn {
+    background-color: #0d6bb7;
+    color: #fff;
+    padding: .6em 1.4em;
+    cursor: pointer;
+    display: inline;
+    border: none;
+    border-radius: 3px;
+}
+div.btn a { color: #fff; }
+
+form div div {
+    margin-bottom: 10px;
+}
+
+form div div input {
+    margin-left: 10px;
+}
+
+p.post-metadata {
+    margin-bottom: -5px;
+}
+
+span.at {
+    font-size: .8em;
+    margin-right: -3px;
+}
+
+span.timestamp {
+    margin-left: 30px;
+    font-size: .8em;
+    color: #6c757d;
+}
+
+span.login-links {
+    display: block;
+    margin-bottom: 1em;
+}
+
+form div div textarea {
+    display: block;
+}
+
+div.error {
+    border: 1px solid transparent;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    border-radius: 3px;
+    padding: .8em;
+    margin-bottom: .8em;
+}

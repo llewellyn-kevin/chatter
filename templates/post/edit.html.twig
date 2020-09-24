@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chatter | Edit Post{% endblock %}
+
+{% block body %}
+<div class="content">
+    <div class="card">
+        <h1>Edit Post</h1>
+        <a href="{{ path('post_index') }}">Cancel</a><br><br>
+
+        {{ include('post/_form.html.twig', {'button_label': 'Update'}) }}
+        <br>
+        {{ include('post/_delete_form.html.twig') }}
+    </div>
+</div>
+{% endblock %}

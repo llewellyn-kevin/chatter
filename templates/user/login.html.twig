@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chatter | Sign In{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="card">
+            <h1>Sign In</h1>
+
+            {% for message in app.flashes('error') %}
+                <div class="error">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
+            <span class="login-links">
+                <a href="{{ path('home') }}">Cancel</a>
+                |
+                <a href="{{ path('sign_up') }}">Sign Up</a>
+            </span>
+
+            {{ include('user/_form.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

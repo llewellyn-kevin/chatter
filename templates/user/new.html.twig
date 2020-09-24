@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chatter | Sign Up{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="card">
+            <h1>Sign Up</h1>
+
+            <span class="login-links">
+                <a href="{{ path('home') }}">Cancel</a>
+                |
+                <a href="{{ path('sign_in') }}">Sign In</a>
+            </span>
+
+            {{ include('user/_form.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

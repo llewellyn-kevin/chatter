@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chatter | Unauthorized{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="card">
+            <h2>Unauthorized</h2>
+            <p>You may only edit your own posts.</p>
+            <a href="{{ path('post_index') }}"><div class="btn">Back</div></a>
+        </div>
+    </div>
+{% endblock %}

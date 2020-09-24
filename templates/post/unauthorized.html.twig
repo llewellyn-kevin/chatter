@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chatter | Sign In{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="card">
+            <h2>Unauthorized</h2>
+            <p>Please sign in to view chat feed.</p>
+            <a href="{{ path('sign_in') }}"><div class="btn">Sign In</div></a>
+            <a href="{{ path('sign_up') }}"><div class="btn">Sign Up</div></a>
+        </div>
+    </div>
+{% endblock %}

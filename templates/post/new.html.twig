@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chatter | New Post{% endblock %}
+
+{% block body %}
+<div class="content">
+    <div class="card">
+        <h1>Create new Post</h1>
+        <a href="{{ path('post_index') }}">Cancel</a><br><br>
+        {{ include('post/_form.html.twig') }}
+    </div>
+</div>
+{% endblock %}

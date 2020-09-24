@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chatter | Feed{% endblock %}
+
+{% block body %}
+    <aside class="user-info">
+    </aside>
+    <div class="card-stack">
+        <h2>Hello, {{ user['username'] }}
+        </h2>
+        <a href="{{ path('post_new') }}">
+            <div class="btn">Make Post</div>
+        </a>
+        <a href="{{ path('sign_out') }}">
+            <div class="btn">Logout</div>
+        </a>
+
+        <br><br><br>
+
+        <h2>Universal Feed</h2>
+        {% for post in posts %}
+            <div href="{{ path('post_show', {'id': post.id}) }}" class="card">
+                <p class="post-metadata">
+                    <span class="author">
+                        <span class="at">@</span>
+                        {{ post.getUser().username }}
+                    </span>
+                    <span class="timestamp">
+                        {{ post.createdAt ? post.createdAt|date('h:ia | d M Y') : '' }}
+                    </span>
+                </p>
+                <p class="post-content">
+                    {{ post.content }}
+                </p>
+                {% if user['id'] == post.getUser().id %}
+                    <p class="post-actions">
+                        <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
+                    </p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
